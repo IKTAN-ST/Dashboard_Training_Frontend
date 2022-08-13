@@ -3,7 +3,7 @@ import useEvaluaciones from "../hooks/useEvaluaciones";
 import { BookOpenIcon } from "@heroicons/react/outline";
 
 const PanelEv = ({ cliente }) => {
-  const { setEdicion, eliminarEvaluacion } = useEvaluaciones();
+  const { setEdicion, eliminarEvSaluacion } = useEvaluaciones();
   const { nombreEvaluacion, tipoEvaluacion, _id, descripcion } = cliente;
   const url = import.meta.env.VITE_FRONTEND_EVALUACIONES_FORM + _id;
 

@@ -1,10 +1,5 @@
 import useEvaluaciones from "../hooks/useEvaluaciones";
 import { BookOpenIcon } from "@heroicons/react/outline";
-import { SearchIcon } from "@heroicons/react/solid";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 const Evaluacion = ({ cliente }) => {
   const { setEdicion, eliminarEvaluacion } = useEvaluaciones();

@@ -16,7 +16,6 @@ import { ClientesProvider } from "./context/ClientesProvider";
 import { EvaluacionesProvider } from "./context/EvaluacionesProvider";
 
 //Pruebas
-import Mmm from "../src/components/mmm";
 import Pruebas from "./paginas/Pruebas";
 
 function App() {
@@ -44,7 +43,6 @@ function App() {
                 <Route path="configuracion" element={<EditarPerfil />} />
                 <Route path="crear-cuestionario" element={<Evaluaciones />} />
                 <Route path="cambiar-password" element={<CambiarPassword />} />
-                <Route path="pruebas" element={<Mmm />} />
               </Route>
             </Routes>
           </EvaluacionesProvider>

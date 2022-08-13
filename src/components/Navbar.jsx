@@ -33,11 +33,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const { auth } = useAuth();
-  const [perfil, setPerfil] = useState({});
 
-  useEffect(() => {
-    setPerfil(auth);
-  }, [auth]);
   const { cerrarSesion } = useAuth();
 
   return (
@@ -92,7 +88,7 @@ const Navbar = () => {
                                     "block px-4 py-2 text-sm text-gray-700"
                                   )}
                                 >
-                                  {perfil.puesto}
+                                  Cerrar Sesion
                                 </Link>
                               )}
                             </Menu.Item>
@@ -200,20 +196,10 @@ const Navbar = () => {
                         </div>
                         <div className="pt-4 pb-2">
                           <div className="flex items-center px-5">
-                            <div className="flex-shrink-0">
-                              <img
-                                className="h-10 w-10 rounded-full"
-                                src={user.imageUrl}
-                                alt=""
-                              />
-                            </div>
+                            <div className="flex-shrink-0"></div>
                             <div className="ml-3 min-w-0 flex-1">
-                              <div className="text-base font-medium text-gray-800 truncate">
-                                {perfil.name}
-                              </div>
-                              <div className="text-sm font-medium text-gray-500 truncate">
-                                {perfil.puesto}
-                              </div>
+                              <div className="text-base font-medium text-gray-800 truncate"></div>
+                              <div className="text-sm font-medium text-gray-500 truncate"></div>
                             </div>
                           </div>
                           <div className="mt-3 px-2 space-y-1">
