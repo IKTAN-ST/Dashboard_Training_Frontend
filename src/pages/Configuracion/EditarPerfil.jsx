@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import useAuth from "../hooks/useAuth";
-import Alerta from "../components/Alerta";
-import PanelUserEdit from "../components/PanelUserEdit";
-import Support from "../components/Support";
+import useAuth from "../../hooks/useAuth";
+import PanelUserEdit from "../../components/UserPanel/PanelUserEdit";
+import Alerta from "../../components/Auxiliar/Alerta";
+import Support from "../../components/Support";
 
 const EditarPerfil = () => {
   const { auth, actualizarPerfil } = useAuth();

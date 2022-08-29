@@ -1,7 +1,7 @@
 import { Outlet, Navigate } from "react-router-dom";
-import Footer from "../components/Footer";
+import Navbar from "../components/Auxiliar/Navbar";
 import useAuth from "../hooks/useAuth";
-import Navbar from "../components/Navbar";
+import Footer from "../components/Auxiliar/Footer";
 
 export function Loading() {
   return (
@@ -13,7 +13,7 @@ export function Loading() {
       >
         <svg
           role="status"
-          class="inline mr-3 w-4 h-4 text-white animate-spin"
+          className="inline mr-3 w-4 h-4 text-white animate-spin"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

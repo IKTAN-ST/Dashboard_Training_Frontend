@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import clienteAxios from "../config/axios";
-import useAuth from "../hooks/useAuth";
-import Alerta from "../components/Alerta";
+import clienteAxios from "../../config/axios";
+import useAuth from "../../hooks/useAuth";
+import Alerta from "../../components/Auxiliar/Alerta";
 
 const Login = () => {
   const [email, setEmail] = useState("");

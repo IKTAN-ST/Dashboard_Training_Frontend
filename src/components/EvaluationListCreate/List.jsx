@@ -1,12 +1,12 @@
-import useEvaluaciones from "../hooks/useEvaluaciones";
+import useEvaluaciones from "../../hooks/useEvaluaciones";
 import { BookOpenIcon } from "@heroicons/react/outline";
 
-const Evaluacion = ({ cliente }) => {
+const List = ({ cliente }) => {
   const { setEdicion, eliminarEvaluacion } = useEvaluaciones();
 
   const { nombreEvaluacion, tipoEvaluacion, _id, descripcion } = cliente;
 
-  const url = "http://localhost:3001/evaluaciones/" + _id;
+  const url = import.meta.env.VITE_FRONTEND_EVALUACIONES_FORM + _id;
   return (
     <div>
       <div className="relative group bg-[#27282d] p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-amber-400">
@@ -61,4 +61,4 @@ const Evaluacion = ({ cliente }) => {
   );
 };
 
-export default Evaluacion;
+export default List;

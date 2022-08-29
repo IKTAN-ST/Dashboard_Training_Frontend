@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import useEvaluaciones from "../hooks/useEvaluaciones";
 import useAuth from "../hooks/useAuth";
-import Alerta from "./Alerta";
+import Alerta from "./Auxiliar/Alerta";
 
 const CrearFormulario = () => {
   const [datos, setDatos] = useState({

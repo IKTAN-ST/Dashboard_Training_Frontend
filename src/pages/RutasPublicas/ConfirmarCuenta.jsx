@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Alerta from "../components/Alerta";
-import clienteAxios from '../config/axios'
+import clienteAxios from "../../config/axios";
+import Alerta from "../../components/Auxiliar/Alerta";
 
 const ConfirmarCuenta = () => {
   const [cuentaConfirmada, setCuentaConfirmada] = useState(false);
@@ -45,9 +45,9 @@ const ConfirmarCuenta = () => {
         {!cargando && <Alerta alerta={alerta} />}
 
         {cuentaConfirmada && (
-          <Link
-          className='block text-center my-5 text-gray-500' 
-          to="/">Iniciar Sesión</Link>
+          <Link className="block text-center my-5 text-gray-500" to="/">
+            Iniciar Sesión
+          </Link>
         )}
       </div>
     </>

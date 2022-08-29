@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Alerta from "../components/Alerta";
-import clienteAxios from "../config/axios";
+import Alerta from "../../components/Auxiliar/Alerta";
+import clienteAxios from "../../config/axios";
 
 const NuevoPassword = () => {
   const [password, setPassword] = useState("");
@@ -96,11 +96,11 @@ const NuevoPassword = () => {
           </>
         )}
 
-        {passwordModificado && 
+        {passwordModificado && (
           <Link className="block text-center my-5 text-gray-500" to="/">
             Inicia Sesión
           </Link>
-        }
+        )}
       </div>
     </>
   );

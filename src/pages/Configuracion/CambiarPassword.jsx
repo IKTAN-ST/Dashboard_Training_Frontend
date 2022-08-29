@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Alerta from "../components/Alerta";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
+
+import Alerta from "../../components/Auxiliar/Alerta";
 
 const CambiarPassword = () => {
   const { guardarPassword } = useAuth();

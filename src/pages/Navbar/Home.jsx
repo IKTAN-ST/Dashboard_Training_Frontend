@@ -1,9 +1,10 @@
-import Announcements from "../components/Announcements";
-import Hires from "../components/Hires";
-import PanelEv from "../components/PanelEv";
-import PanelUser from "../components/PanelUser";
+import Announcements from "../../components/Announcements";
+import Data from "../../components/EvaluationsListHome/Data";
+import Hires from "../../components/Hires";
+import PanelUser from "../../components/UserPanel/PanelUser";
+import UserList from "../../components/Users/UserList";
 
-const Pruebas = () => {
+function Home() {
   return (
     <>
       <main className="bg-[#1e1f22] border-t-2 border-[#333333] -mt-24 pb-8">
@@ -16,17 +17,14 @@ const Pruebas = () => {
               {/* PRIMER PANEL */}
               <PanelUser />
               {/* Actions PANEL EDITABLE */}
-              <PanelEv />
+              <Data />
+              <UserList />
             </div>
-
             {/* Right column */}
             <div className="grid grid-cols-1 gap-4">
               {/* Announcements */}
-
               <Announcements />
-
               {/* Recent Hires */}
-
               <Hires />
             </div>
           </div>
@@ -34,6 +32,6 @@ const Pruebas = () => {
       </main>
     </>
   );
-};
+}
 
-export default Pruebas;
+export default Home;

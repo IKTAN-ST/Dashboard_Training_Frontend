@@ -1,7 +1,5 @@
 import CrearFormulario from "../components/CrearFormulario";
-import PanelEv from "../components/PanelEv";
-import Evaluacion from "../components/Evaluacion";
-import ListadoEvaluaciones from "../components/ListadoEvaluaciones";
+import Data from "../components/EvaluationListCreate/Data";
 
 const Evaluaciones = () => {
   return (
@@ -13,9 +11,7 @@ const Evaluaciones = () => {
               <CrearFormulario />
             </div>
             <div className="grid grid-cols-1 gap-4">
-              {/*               <PanelEv />
-               */}{" "}
-              <ListadoEvaluaciones />
+              <Data />
             </div>
           </div>
         </div>

@@ -1,21 +1,23 @@
 import React, { useRef, useState } from "react";
-import useEvaluaciones from "../hooks/useEvaluaciones";
+import useEvaluaciones from "../../hooks/useEvaluaciones";
 import { BookOpenIcon } from "@heroicons/react/outline";
 
-const PanelEv = ({ cliente }) => {
-  const { setEdicion, eliminarEvSaluacion } = useEvaluaciones();
-  const { nombreEvaluacion, tipoEvaluacion, _id, descripcion } = cliente;
+const List = ({ data }) => {
+  const { setEdicion, eliminarEvaluacion } = useEvaluaciones();
+  const { nombreEvaluacion, tipoEvaluacion, _id, descripcion } = data;
   const url = import.meta.env.VITE_FRONTEND_EVALUACIONES_FORM + _id;
 
+  //? Copiar Texto
   const [copySuccess, setCopySuccess] = useState("");
   const textAreaRef = useRef(null);
 
-  function copyToClipboard(e) {
+  const copyToClipboard = (e) => {
     textAreaRef.current.select();
     document.execCommand("copy");
     e.target.focus();
     setCopySuccess("[Copaido]");
-  }
+  };
+  //? Copiar Texto Fin
 
   return (
     <div>
@@ -95,4 +97,4 @@ const PanelEv = ({ cliente }) => {
   );
 };
 
-export default PanelEv;
+export default List;
